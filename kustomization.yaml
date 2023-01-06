@@ -9,6 +9,9 @@ resources:
 
 namespace: kubernetes-dashboard
 patches:
-- path: base/deployment-patch.yaml
+- path: base/dashboard-metric-scraper-deployment-patch.yaml
+  target:
+    kind: Deployment
+- path: base/kubernetes-dashboard-deployment-patch.yaml
   target:
     kind: Deployment
